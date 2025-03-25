@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masayoshi K. Hiraiwa's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #333;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1001;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        .side-menu {
+            background-color: #555555;
+            width: 200px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            transition: transform 0.3s ease;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .side-menu a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .side-menu a:hover {
+            background-color: #666666;
+        }
+
+        .content-area {
+            margin-left: 200px;
+            width: calc(100% - 200px);
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            color: #f4f4f4;
+            box-shadow: none;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin: 10px auto;
+            flex-wrap: wrap;
+            max-width: 900px;
+            background-color: #333;
+            padding: 0 1rem;
+        }
+
+        .gallery-image-container img {
+            width: 160px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .intro-section {
+            max-width: 900px;
+            margin: 0.5rem auto;
+            padding: 1rem;
+            text-align: left;
+            color: #f4f4f4;
+            background-color: #333;
+        }
+
+        .cta-buttons {
+            text-align: center;
+            margin: 10px 0 20px 0;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 10px 20px;
+            border: 1px solid #f4f4f4;
+            color: #f4f4f4;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .news-section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #bbb;
+        }
+
+        @media screen and (max-width: 768px) {
+            .side-menu {
+                transform: translateX(-100%);
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 200px;
+                background-color: #555555;
+                z-index: 1000;
+            }
+
+            .side-menu.active {
+                transform: translateX(0);
+            }
+
+            .content-area {
+                margin-left: 0;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="side-menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="photos.html">Photos</a>
+        <a href="links.html">Links</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="content-area">
+        <header>
+            <h1>Masayoshi K. Hiraiwa's Website</h1>
+        </header>
+
+        <div class="image-gallery">
+            <div class="gallery-image-container">
+                <img src="s-DSC00021.jpg" alt="Butterfly on flower">
+            </div>
+            <div class="gallery-image-container">
+                <img src="s-DSC00436.jpg" alt="Bee in flower">
+            </div>
+            <div class="gallery-image-container">
+                <img src="s-DSC01463.jpg" alt="Wasp on flower">
+            </div>
+            <div class="gallery-image-container">
+                <img src="s-DSC01830.jpg" alt="Bee on purple flower">
+            </div>
+            <div class="gallery-image-container">
+                <img src="s-DSC04498.jpg" alt="Bee on yellow flower">
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <p>このページは近畿大学に所属する平岩将良の研究紹介ページです。花と昆虫の相互作用を中心に送粉生態学や群集生態学、島嶼生態学の研究を行っています。</p>
+            <p><strong>所属経歴：</strong>東邦大学 → 神戸大学 → 農研機構 → 近畿大学</p>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="https://scholar.google.com/citations?user=yourprofile" target="_blank">Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/yourprofile" target="_blank">ResearchGate</a>
+            <a href="https://orcid.org/yourorcid" target="_blank">ORCID</a>
+            <a href="https://researchmap.jp/yourprofile" target="_blank">ResearchMap</a>
+        </div>
+
+        <div class="news-section">
+            <h2>News & Recent Publications</h2>
+            <div class="news-item">
+                <h3>International Congress of Entomology Presentation</h3>
+                <p>March 1, 2025 — Presented on the topic of the latitudinal cline effects of climate-driven invasive species on native pollinators.</p>
+                <a href="https://example.com/presentation" target="_blank">View Presentation Slides</a>
+            </div>
+
+            <div class="news-item">
+                <h3>New Publication Released</h3>
+                <p>January 25, 2025 — <a href="https://doi.org/example1" target="_blank">Effects of neonative invader along latitude</a> published in Global Change Biology.</p>
+            </div>
+
+            <div class="news-item">
+                <h3>New Field Survey Started</h3>
+                <p>February 10, 2025 — Launched a new pollination network field survey in Hokkaido.</p>
+                <a href="https://example.com/field-report" target="_blank">Read Field Report</a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Masayoshi K Hiraiwa</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

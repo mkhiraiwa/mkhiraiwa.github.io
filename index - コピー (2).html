@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masayoshi K. Hiraiwa's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1001;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        .side-menu {
+            background-color: #555;
+            width: 200px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            transition: transform 0.3s ease;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .side-menu a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+
+        .side-menu a:hover {
+            background-color: #666;
+        }
+
+        .side-menu a:hover::after {
+            content: '';
+            position: fixed;
+            left: 210px;
+            top: 100px;
+            width: 150px;
+            height: 150px;
+            background: url('hosohirata.png') no-repeat center center / contain;
+            z-index: 9999;
+        }
+
+        .content-area {
+            margin-left: 200px;
+            max-width: 1000px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 0 auto 1rem auto;
+            max-width: 720px;
+        }
+
+        .gallery-image-container img {
+            width: 140px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .intro-section {
+            background-color: #444;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem auto 2rem auto;
+            max-width: 720px;
+        }
+
+        .cta-buttons {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .news-section {
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0 auto;
+            max-width: 720px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .side-menu {
+                transform: translateX(-100%);
+            }
+
+            .side-menu.active {
+                transform: translateX(0);
+            }
+
+            .content-area {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .image-gallery {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                max-width: 90%;
+            }
+
+            .gallery-image-container img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="side-menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="photos.html">Photos</a>
+    <a href="links.html">Links</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="content-area">
+    <header>
+        <h1>Masayoshi K. Hiraiwa's Website</h1>
+    </header>
+
+    <div class="image-gallery">
+        <div class="gallery-image-container"><img src="s-DSC00021.jpg" alt="Butterfly on flower"></div>
+        <div class="gallery-image-container"><img src="s-DSC00436.jpg" alt="Bee in flower"></div>
+        <div class="gallery-image-container"><img src="s-DSC01463.jpg" alt="Wasp on flower"></div>
+        <div class="gallery-image-container"><img src="s-DSC01830.jpg" alt="Bee on purple flower"></div>
+        <div class="gallery-image-container"><img src="s-DSC04498.jpg" alt="Bee on yellow flower"></div>
+    </div>
+
+    <div class="intro-section">
+        <p>このページは近畿大学に所属する平岩将良の研究紹介ページです。花と昆虫の相互作用を中心に送粉生態学や群集生態学、島嶼生態学の研究を行っています。</p>
+        <p><strong>所属経歴：</strong> 東邦大学 → 神戸大学 → 農研機構 → 近畿大学</p>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="https://scholar.google.com/citations?user=yourprofile" target="_blank">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/yourprofile" target="_blank">ResearchGate</a>
+        <a href="https://orcid.org/yourorcid" target="_blank">ORCID</a>
+        <a href="https://researchmap.jp/yourprofile" target="_blank">ResearchMap</a>
+    </div>
+
+    <div class="news-section">
+        <h2>News & Recent Publications</h2>
+        <p>最新情報と論文はこちらに表示されます。</p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Masayoshi K Hiraiwa</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+</body>
+</html>
