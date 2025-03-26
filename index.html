@@ -15,7 +15,7 @@
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: stretch;
             line-height: 1.8;
         }
 
@@ -79,7 +79,6 @@
         .content-area {
             margin-left: 200px;
             width: calc(100% - 200px);
-            max-width: 1200px;
             padding: 20px;
             box-sizing: border-box;
         }
@@ -105,7 +104,7 @@
             gap: 20px;
             margin: 10px auto;
             flex-wrap: wrap;
-            max-width: 900px;
+            width: 100%;
             background-color: #333;
             padding: 0 1rem;
         }
@@ -117,7 +116,7 @@
         }
 
         .intro-section {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0.5rem auto;
             padding: 1rem;
             text-align: left;
@@ -126,7 +125,7 @@
         }
 
         .intro-section p, .intro-section ul, .intro-section li {
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         .intro-section ul li {
@@ -134,7 +133,13 @@
         }
 
         .intro-section strong {
-            font-weight: 700;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0.5rem auto;
+            padding: 1rem;
+            text-align: left;
+            color: #f4f4f4;
+            background-color: #333;
         }
 
         .cta-buttons {
@@ -160,7 +165,7 @@
         }
 
         .news-section {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 2rem auto;
             padding: 1rem;
             background-color: #f9f9f9;
