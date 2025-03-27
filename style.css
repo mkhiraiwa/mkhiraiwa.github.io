@@ -138,6 +138,25 @@ nav a:hover {
     color: #000000;
 }
 
+.news-date {
+  color: #888;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.news-link {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 6px 12px;
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.news-link:hover {
+  background-color: #777;
+}
+
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
