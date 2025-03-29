@@ -175,8 +175,13 @@ nav a:hover {
 }
 
 .news-item img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
   height: auto;
+  display: block;
+  margin-top: 1rem;
 }
 
 h2 {
