@@ -1,102 +1,63 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
- "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masayoshi K. Hiraiwa's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
-<html>
+    <div class="side-menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile & Contact</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications & Presentations</a>
+        <a href="photos.html">Photos</a>
+        <a href="links.html">Links</a> 
+    </div>
 
- <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Masayoshi K Hiraiwa's website</title>
-<link href="stile.css" rel="stylesheet" type="text/css">
-
- <style type="text/css">
- <!--
-
-        .sample1  {
-                   text-align:center;          /* IE用の中央寄せ */
-                   width:70%;                /* 幅 */
-                  }
-        .sample2  {
-                   margin-left:auto;           /* IE以外用の中央寄せ */
-                   margin-right:auto;          /* IE以外用の中央寄せ */
-                   text-align:left;            /* 中身を左寄せに戻す */               
-                  }
-
- -->
- </style>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-101218278-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
- </head>
-
-
- <body>
-<body bgcolor="#EEEEEE">
-<body style="font-family:Helvetica,Arial,'メイリオ',Meiryo,sans-serif;">
-<font color="black"><font size="6">Links</font></font>
+    <div class="container">
+        所属研究室
+        <br>
+<a href="https://dai-michikusalab.jimdofree.com/" target="_blank">近畿大学　生態系保全研究室</a>
 <br>
+<a href="http://www2.kobe-u.ac.jp/~ushimaru/" target="_blank">神戸大学　生物多様性研究室</a>
 <br>
-<br>
- <div class="sample1">
-         <div class="sample2">
-
-
-
-<br>
-<Hr>
-<br>
-所属研究室
-<br>
-<a href="http://www2.kobe-u.ac.jp/~ushimaru/" target="_blank">神戸大学生物多様性研究室</a>
-<br>
-<a href="http://www2.kobe-u.ac.jp/~minamoto/" target="_blank">神戸大学源研究室</a>
+<a href="http://www2.kobe-u.ac.jp/~minamoto/" target="_blank">神戸大学　源研究室</a>
 
 <br>
 <br>
 研究者仲間
 <br>
-<a href="http://pollenpollen.turukusa.com/index.html" target="_blank">日下石碧さん（筑波大）</a>
+<a href="http://pollenpollen.turukusa.com/index.html" target="_blank">日下石碧さん（農研機構）</a>
 <br>
-<a href="https://naoyukinkhm.wixsite.com/mysite" target="_blank">中濵直之さん（東京大）</a>
+<a href="https://naoyukinkhm.wixsite.com/mysite" target="_blank">中濵直之さん（兵庫県立大学・兵庫県立人と自然の博物館）</a>
 <br>
-<a href="https://sites.google.com/view/kokikatsuhara/" target="_blank">勝原光希さん（神戸大）</a>
+<a href="https://sites.google.com/view/kokikatsuhara/" target="_blank">勝原光希さん（岡山大学）</a>
 <br>
-<a href="https://sites.google.com/site/keiuchidawebsitebiodiversity/home" target="_blank">内田圭さん（横浜国立大）</a>
-</font>
-</div>
-        </div>
-
-<br>
-<br>
-<a href="http://mkhiraiwa.ehoh.net/" target="_top">Top</a>
- 
+<a href="https://sites.google.com/site/keiuchidawebsitebiodiversity/home" target="_blank">内田圭さん（東京都市大学）</a>
+    </div>
 
 
-<script type="text/javascript">
-    window._pt_lt = new Date().getTime();
-    window._pt_sp_2 = [];
-    _pt_sp_2.push('setAccount,5929e14b');
-    var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    (function() {
-        var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
-        atag.src = _protocol + 'js.ptengine.jp/pta.js';
-        var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
-        stag.src = _protocol + 'js.ptengine.jp/pts.js';
-        var s = document.getElementsByTagName('script')[0]; 
-        s.parentNode.insertBefore(atag, s); s.parentNode.insertBefore(stag, s);
-    })();
-</script>
-                        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Masayoshi K. Hiraiwa</p>
+            </div>
+        </footer>
+    </div>
 
-
- </body>
-
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
 </html>
+
+
