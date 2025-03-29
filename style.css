@@ -141,6 +141,13 @@ nav a:hover {
 .news-date {
   color: #888;
   font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 0.5em;
+}
+
+.news-title {
+  font-weight: bold;
+  font-size: 1.2rem;
   margin-right: 0.5em;
 }
 
