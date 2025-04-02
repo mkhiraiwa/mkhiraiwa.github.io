@@ -167,55 +167,7 @@
 
 
 
-/* メディアクエリ */
-@media screen and (max-width: 768px) {
-    .side-menu {
-    transform: translateX(-100%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px;
-    background-color: #555555;
-    z-index: 1000;
-    }
 
-    .side-menu.active {
-        transform: translateX(0);
-    }
-
-    .content-area {
-        margin-left: 0;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .hamburger {
-        display: block;
-    }
-    .cta-buttons {
-        justify-content: flex-start;
-        width: 100%;
-        margin-top: 10px;
-    }    
-    .image-gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-items: center;
-    }
-
-    .gallery-image-container img {
-        width: 100%;
-        max-width: 100px;
-        height: auto;
-    }
-
-    .news-item img {
-    max-width: 100vw;   /* ← ここが重要 */
-    height: auto;
-    }
-}
 
 body {
     margin: 0;
@@ -401,4 +353,54 @@ footer {
 
 .social-links a:hover {
     color: #16a085;
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 768px) {
+    .side-menu {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #555555;
+    z-index: 1000;
+    }
+
+    .side-menu.active {
+        transform: translateX(0);
+    }
+
+    .content-area {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .cta-buttons {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }    
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .gallery-image-container img {
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+
+    .news-item img {
+    max-width: 90vw;   /* ← ここが重要 */
+    height: auto;
+    }
 }
