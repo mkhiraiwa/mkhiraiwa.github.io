@@ -317,11 +317,17 @@ nav a:hover {
 .news-item img {
   width: 100%;
   max-width: 500px;
-  max-height: 500px;
+  max-height: 250px;
   width: auto;
   height: auto;
   display: block;
   margin-top: 1rem;
+}
+
+.image-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* スマホ対応 */
 }
 
 h2 {
