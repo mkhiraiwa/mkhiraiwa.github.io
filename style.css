@@ -212,8 +212,8 @@
     }
 
     .news-item img {
-    width: 80%;
-    max-width: 100%;   /* ← ここが重要 */
+    max-width: 100vw;   /* ← ここが重要 */
+    height: auto;
     }
 }
 
