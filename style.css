@@ -307,6 +307,11 @@ nav a:hover {
 }
 
 
+.trail {
+  display: inline-block;
+  word-break: break-word;
+}
+
 
 .container {
     max-width: 1200px;
