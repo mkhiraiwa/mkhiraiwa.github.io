@@ -213,6 +213,7 @@
 
     .news-item img {
     width: 80%;
+    max-width: 100%;   /* ← ここが重要 */
     }
 }
 
