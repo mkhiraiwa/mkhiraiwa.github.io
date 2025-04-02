@@ -310,6 +310,7 @@ nav a:hover {
 .trail {
   display: inline-block;
   word-break: break-word;
+  white-space: normal;
 }
 
 
