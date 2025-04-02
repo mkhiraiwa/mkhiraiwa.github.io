@@ -306,6 +306,10 @@ nav a:hover {
     border-radius: 5px;
 }
 
+.name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 
 .trail {
   display: inline-block;
